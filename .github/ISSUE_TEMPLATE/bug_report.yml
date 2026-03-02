@@ -1,0 +1,126 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Action Overlay
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below so we can reproduce and fix the issue.
+
+  - type: input
+    id: version
+    attributes:
+      label: App Version
+      description: Which version of Action Overlay are you using? (Found in Action Overlay > About Action Overlay)
+      placeholder: "e.g. 1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS Version
+      description: Which version of macOS are you running?
+      placeholder: "e.g. macOS 15.3 Sequoia"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the app is affected?
+      options:
+        - Video Preview
+        - Export / Rendering
+        - Overlay Appearance
+        - Telemetry Parsing (SRT / Flight Record)
+        - Presets / Templates
+        - UI / Layout
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is.
+      placeholder: Describe the issue...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Open a video file...
+        2. Enable the speed gauge overlay...
+        3. Click export...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: drone
+    attributes:
+      label: Drone / Camera
+      description: Which device recorded the video and telemetry?
+      options:
+        - DJI Mini 4 Pro
+        - DJI Air 3
+        - DJI Mavic 3 (series)
+        - DJI Avata (series)
+        - DJI FPV
+        - Other DJI
+        - GoPro
+        - Other
+      multiple: true
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Screen Recordings
+      description: If applicable, add screenshots or screen recordings to help explain the issue. You can drag and drop images here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: sample-files
+    attributes:
+      label: Sample Files
+      description: |
+        If the issue is related to telemetry parsing, please attach a sample SRT file (or a small snippet of it).
+        **Do not share files containing sensitive location data if you're uncomfortable doing so.**
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context, logs, or console output that might help.
+    validations:
+      required: false
