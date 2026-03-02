@@ -1,0 +1,61 @@
+name: Support / Question
+description: Ask a question or get help using Action Overlay
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about Action Overlay? We're happy to help!
+        Please check the in-app User Guide (Help > Action Overlay Help) first — your answer might already be there.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Topic
+      description: What is your question about?
+      options:
+        - Getting Started / Setup
+        - Loading Video or Telemetry
+        - Overlays and Sensors
+        - Styling and Appearance
+        - Exporting
+        - Presets / Templates
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: Describe what you need help with.
+      placeholder: "How do I..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: What have you tried?
+      description: Any steps you've already taken or things you've looked at.
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your question. You can drag and drop images here.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: App Version
+      description: Which version of Action Overlay are you using? (Found in Action Overlay > About Action Overlay)
+      placeholder: "e.g. 1.2.0"
+    validations:
+      required: false
