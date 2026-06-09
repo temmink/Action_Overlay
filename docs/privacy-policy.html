@@ -62,7 +62,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="subtitle">Action Overlay for macOS &mdash; Last updated: March 2, 2026</p>
+        <p class="subtitle">Action Overlay for macOS &mdash; Last updated: June 9, 2026</p>
 
         <div class="highlight">
             <strong>Summary:</strong> Action Overlay does not collect, store, or transmit any personal data. All processing happens locally on your Mac.
@@ -74,7 +74,7 @@
             <li>Does not require an account or sign-in</li>
             <li>Does not use analytics or tracking</li>
             <li>Does not contain advertising</li>
-            <li>Does not access your contacts, photos, calendar, or location</li>
+            <li>Does not access your contacts, photos, calendar, or device location (GPS data is read only from telemetry files you select)</li>
             <li>Does not use cookies or similar tracking technologies</li>
         </ul>
 
@@ -82,9 +82,10 @@
         <p>All video processing, telemetry parsing, and overlay rendering happens entirely on your Mac. Your video files, telemetry data (SRT files, flight records), and exported videos never leave your device.</p>
 
         <h2>Network Access</h2>
-        <p>Action Overlay makes a single type of network request:</p>
+        <p>Action Overlay makes two types of network requests, both optional and feature-specific:</p>
         <ul>
             <li><strong>DJI Flight Record Decryption:</strong> When you load a DJI flight record file, the app contacts the DJI API (<code>dev.dji.com</code>) to retrieve decryption keychains. Only the flight record's encryption metadata is sent &mdash; no personal data, video files, or GPS coordinates are transmitted. This request requires a DJI developer API key that you provide.</li>
+            <li><strong>Apple Maps Backgrounds:</strong> When you enable a map background (standard, satellite, or hybrid) for the GPS path overlay, the app uses Apple's MapKit to render map tiles. The geographic bounding box of your flight's GPS track is sent to Apple Maps servers to retrieve the corresponding map imagery. This data is handled under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. No map data is requested if you do not enable a map background.</li>
         </ul>
         <p>No other network requests are made. The app functions fully offline for all other features, including SRT telemetry processing and video export.</p>
 
@@ -92,7 +93,7 @@
         <p>Action Overlay only accesses files that you explicitly select through macOS file dialogs (Open/Save panels). The app operates within the macOS App Sandbox and cannot access files outside of your selections.</p>
 
         <h2>Third-Party Services</h2>
-        <p>Action Overlay does not integrate with any third-party analytics, advertising, or data collection services. The only external service used is the DJI developer API as described above.</p>
+        <p>Action Overlay does not integrate with any third-party analytics, advertising, or data collection services. The only external services used are the DJI developer API and Apple Maps, as described above.</p>
 
         <h2>Data Storage</h2>
         <p>The app stores your preferences (overlay settings, device presets, window positions) locally using macOS UserDefaults. This data stays on your Mac and is never transmitted.</p>
